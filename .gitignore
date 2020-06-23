@@ -358,3 +358,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+SampleEfCoreBookStore/obj/Debug/netcoreapp3.1/
