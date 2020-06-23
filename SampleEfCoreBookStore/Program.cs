@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using SampleEfCoreBookStore.Domain.Entities;
 using SampleEfCoreBookStore.Infra;
+using static SampleEfCoreBookStore.Constants;
 
 namespace SampleEfCoreBookStore
 {
@@ -11,10 +12,14 @@ namespace SampleEfCoreBookStore
     {
         static void Main(string[] args)
         {
+            
             var optionsBuilder = new DbContextOptionsBuilder<BookstoreDbContext>();
-            optionsBuilder.UseInMemoryDatabase("Bookstore");
+            optionsBuilder.UseSqlServer(ConnectionString);
 
             var context = new BookstoreDbContext(optionsBuilder.Options);
+
+            context.Database.Migrate();
+            context.Database.EnsureCreated();
 
             var me = Author.Create("Saeed", "Ganji", DateTime.Now.AddDays(-1));
             me.AddBook("EF Core" , "132465");

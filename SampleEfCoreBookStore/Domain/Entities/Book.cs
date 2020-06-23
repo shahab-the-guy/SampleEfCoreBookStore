@@ -6,10 +6,11 @@ namespace SampleEfCoreBookStore.Domain.Entities
 {
     public class Book : ICanBeSoftDeleted
     {
+        private Guid _authorId;
+
         private Book()
         {
         }
-
         internal static Book ForAuthor(Guid authorId, string title, string isbn)
             => new Book
             {
@@ -18,14 +19,11 @@ namespace SampleEfCoreBookStore.Domain.Entities
                 _authorId = authorId
             };
 
+
         public long Id { get; private set; }
         public string ISBN { get; private set; }
         public string Title { get; private set; }
-
-        private Guid _authorId;
-
         public bool IsDeleted { get; private set; }
-
         internal void Archive() => IsDeleted = true;
     }
 }

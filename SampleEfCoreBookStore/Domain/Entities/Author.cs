@@ -9,7 +9,7 @@ namespace SampleEfCoreBookStore.Domain.Entities
     {
         private Author()
         {
-            _books = new List<Book>();
+            _someBooks = new List<Book>();
         }
 
         public static Author Create(string firstname, string lastname, DateTime birthdate)
@@ -35,11 +35,11 @@ namespace SampleEfCoreBookStore.Domain.Entities
         public void Deactivate() => IsDeleted = true;
         public void ArchiveBook(Book b) => b.Archive();
 
-        private readonly List<Book> _books;
-        public IEnumerable<Book> Books => _books;
+        private readonly List<Book> _someBooks;
+        public IEnumerable<Book> Books => _someBooks;
 
         public void AddBook(string title, string isbn)
-            => _books.Add(ForAuthor(this.Id, title, isbn));
+            => _someBooks.Add(ForAuthor(this.Id, title, isbn));
 
         public Guid Id { get; private set; }
         public string FirstName { get; private set; }
