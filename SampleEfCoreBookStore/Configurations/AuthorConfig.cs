@@ -21,6 +21,13 @@ namespace SampleEfCoreBookStore.Configurations
             //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
             navigation.SetField("_someBooks"); // if you have not used the naming conventions
             // navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+
+            builder.Property<DateTimeOffset>("CreatedOn").IsRequired();
+            builder.Property<DateTimeOffset?>("LastUpdatedOn")
+                .IsRequired(false)
+                .HasColumnName("LastUpdatedAt");
+
         }
     }
 }
