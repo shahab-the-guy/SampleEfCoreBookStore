@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SampleEfCoreBookStore.Domain.Abstractions;
 using static SampleEfCoreBookStore.Domain.Entities.Book;
 
 namespace SampleEfCoreBookStore.Domain.Entities

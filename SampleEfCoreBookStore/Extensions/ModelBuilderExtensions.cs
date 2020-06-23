@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using SampleEfCoreBookStore.Domain.Abstractions;
 using SampleEfCoreBookStore.Domain.Entities;
 
 namespace SampleEfCoreBookStore.Extensions

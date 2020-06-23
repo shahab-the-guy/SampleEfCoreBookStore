@@ -1,4 +1,4 @@
-﻿namespace SampleEfCoreBookStore.Domain.Entities
+﻿namespace SampleEfCoreBookStore.Domain.Abstractions
 {
     public interface ICanBeSoftDeleted
     {
