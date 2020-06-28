@@ -6,7 +6,7 @@ using static SampleEfCoreBookStore.Domain.Entities.Book;
 
 namespace SampleEfCoreBookStore.Domain.Entities
 {
-    public class Author : ICanBeSoftDeleted
+    public class Author : ICanBeSoftDeleted , IHaveTrackingDates
     {
         private Author()
         {

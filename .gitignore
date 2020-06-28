@@ -360,3 +360,12 @@ MigrationBackup/
 FodyWeavers.xsd
 
 SampleEfCoreBookStore/obj/Debug/netcoreapp3.1/
+
+.idea
+.vscode
+
+.DS_Store
+
+SampleEfCoreBookStore/bin/
+
+SampleEfCoreBookStore/obj/

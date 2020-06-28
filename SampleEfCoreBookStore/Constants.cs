@@ -6,6 +6,6 @@ namespace SampleEfCoreBookStore
 {
     static class Constants
     {
-        public const string ConnectionString = "Server=localhost; Database=Bookstore; Integrated Security=true;";
+        public const string ConnectionString = "Server=localhost; Database=Bookstore; UID=sa; PWD=P@assw0rd";
     }
 }

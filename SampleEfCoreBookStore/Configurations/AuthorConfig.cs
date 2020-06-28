@@ -23,10 +23,10 @@ namespace SampleEfCoreBookStore.Configurations
             // navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
 
 
-            builder.Property<DateTimeOffset>("CreatedOn").IsRequired();
-            builder.Property<DateTimeOffset?>("LastUpdatedOn")
-                .IsRequired(false)
-                .HasColumnName("LastUpdatedAt");
+            // builder.Property<DateTimeOffset>("CreatedOn").IsRequired();
+            // builder.Property<DateTimeOffset?>("LastUpdatedOn")
+            //     .IsRequired(false)
+            //     .HasColumnName("LastUpdatedAt");
 
         }
     }

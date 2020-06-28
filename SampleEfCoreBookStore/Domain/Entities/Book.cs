@@ -7,7 +7,9 @@ namespace SampleEfCoreBookStore.Domain.Entities
 {
     public class Book : ICanBeSoftDeleted
     {
+#pragma warning disable 414
         private Guid _authorId;
+#pragma warning restore 414
 
         private Book()
         {
